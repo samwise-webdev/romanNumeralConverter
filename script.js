@@ -17,10 +17,17 @@ function isInputEmpty() {
 function firstDigit() {
     if(numberValue.value.length === 1 && numberValue.value <= 3) {
         output.innerText = ones;
-        for (let i = 1; i < output.value; i++) {
-            output.innerText += "I";
-        }
+            for (let i = 1; i < numberValue.value; i++) {
+                output.innerText += "I";
+            }
     }  else if (numberValue.value.length === 1 && parseInt(numberValue.value) === 4) {
         output.innerText = ones + fives;
+    } else if (numberValue.value.length === 1 && numberValue.value <= 8 && numberValue.value >= 5) {
+        output.innerText = fives;
+            for (let j = 5; j < numberValue.value; j++) {
+                output.innerText += "I"
+            }
+    } else if (numberValue.value.length === 1 && parseInt(numberValue.value) === 5) {
+        output.innerText = fives;
     }
 }
