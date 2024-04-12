@@ -1,0 +1,13 @@
+body {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    align-content: center;
+}
+
+#input-content {
+    margin-top: 1.25rem;
+}
+#output {
+    margin-top: 2rem;
+}

@@ -14,7 +14,7 @@ function isInputEmpty() {
     }
 }
 
-function firstDigit() {
+function oneDigit() {
     if(numberValue.value.length === 1 && numberValue.value <= 3) {
         output.innerText = ones;
             for (let i = 1; i < numberValue.value; i++) {
@@ -31,3 +31,5 @@ function firstDigit() {
         output.innerText = fives;
     }
 }
+
+function 
