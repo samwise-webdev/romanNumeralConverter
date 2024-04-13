@@ -50,5 +50,14 @@ function twoDigits() {
         for (let i = 10; i < numberValue.value; i++) {
             output.innerText += "I";
         }
+    } else if(numberValue.value <= 18 && numberValue.value >= 15) {
+        output.innerText = tens + fives;
+        for (let i = 15; i < numberValue.value; i++) {
+            output.innerText += "I";
+        }
+    } else if(parseInt(numberValue.value) === 14) {
+        output.innerText = "XIV"
+    } else if(parseInt(numberValue.value) === 19) {
+        output.innerText = "XIX"
     }
 }
