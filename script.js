@@ -4,6 +4,16 @@ const convertBtn = document.getElementById("convert-btn");
 const ones = "I";
 const fives = "V";
 const tens = "X";
+// const twenties = tens + "X";
+// const thirties = tens + twenties;
+
+
+// function inputArray() {
+//     const userInputArray = []
+//     userInputArray.push(numberValue.value);
+//     return userInputArray;
+// } this is useless lmao
+
 
 function onClickFunctions() {
     isInputEmpty();
@@ -59,5 +69,14 @@ function twoDigits() {
         output.innerText = "XIV"
     } else if(parseInt(numberValue.value) === 19) {
         output.innerText = "XIX"
-    }
+    } 
 }
+
+//function to add the I's to any prefix ???
+//  function onesPlace() {
+//     numberValue.value = [];
+//         for (let i = number.value - 1; ) {
+            
+//         }
+//     }
+//  }
