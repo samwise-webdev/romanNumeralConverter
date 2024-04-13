@@ -1,8 +1,15 @@
 const numberValue = document.getElementById("number");
 const output = document.getElementById("output");
-const convertBtn = document.getElementById("convert-btn")
+const convertBtn = document.getElementById("convert-btn");
 const ones = "I";
-const fives = "V"
+const fives = "V";
+const tens = "X";
+
+function onClickFunctions() {
+    isInputEmpty();
+    oneDigit();
+    twoDigits();
+}
 
 function isInputEmpty() {
     if (numberValue.value.length <= 0) {
@@ -15,21 +22,33 @@ function isInputEmpty() {
 }
 
 function oneDigit() {
-    if(numberValue.value.length === 1 && numberValue.value <= 3) {
+    if(numberValue.value <= 3) {
         output.innerText = ones;
             for (let i = 1; i < numberValue.value; i++) {
                 output.innerText += "I";
             }
-    }  else if (numberValue.value.length === 1 && parseInt(numberValue.value) === 4) {
+    }  else if (parseInt(numberValue.value) === 4) {
         output.innerText = ones + fives;
-    } else if (numberValue.value.length === 1 && numberValue.value <= 8 && numberValue.value >= 5) {
+    } else if (numberValue.value <= 8 && numberValue.value >= 5) {
         output.innerText = fives;
             for (let j = 5; j < numberValue.value; j++) {
-                output.innerText += "I"
+                output.innerText += "I";
             }
-    } else if (numberValue.value.length === 1 && parseInt(numberValue.value) === 5) {
+    } else if (parseInt(numberValue.value) === 5) {
         output.innerText = fives;
+    } else if (parseInt(numberValue.value) === 9) {
+        output.innerText = "IX";
     }
 }
 
-function 
+function twoDigits() {
+    if (parseInt(numberValue.value) === 10) {
+        output.innerText = tens;
+    }
+    else if(numberValue.value <= 14 && numberValue.value >= 11) {
+        output.innerText = tens;
+        for (let i = 10; i < numberValue.value; i++) {
+            output.innerText += "I";
+        }
+    }
+}
