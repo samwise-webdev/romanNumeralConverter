@@ -45,7 +45,7 @@ function twoDigits() {
     if (parseInt(numberValue.value) === 10) {
         output.innerText = tens;
     }
-    else if(numberValue.value <= 14 && numberValue.value >= 11) {
+    else if(numberValue.value <= 13 && numberValue.value >= 11) {
         output.innerText = tens;
         for (let i = 10; i < numberValue.value; i++) {
             output.innerText += "I";
