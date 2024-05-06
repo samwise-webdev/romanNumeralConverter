@@ -1,4 +1,5 @@
 const numberValue = document.getElementById("number");
+// const numberValueParsed = parseInt(document.getElementById("number"));  this doesn't work and I don't know why
 const output = document.getElementById("output");
 const convertBtn = document.getElementById("convert-btn");
 const ones = "I";
@@ -19,7 +20,7 @@ function onClickFunctions() {
     isInputEmpty();
     oneDigit();
     twoDigits();
-    onesPlace();
+//    onesPlace();
 }
 
 function isInputEmpty() {
@@ -34,12 +35,12 @@ function isInputEmpty() {
 
 
 function oneDigit() {
-    if(numberValue.value <= 3) {
+    if(numberValue.value <= 3) { //this does not need to be parsed b/c of type coersion
         output.innerText = ones;
             for (let i = 1; i < numberValue.value; i++) {
                 output.innerText += "I";
             }
-    }  else if (parseInt(numberValue.value) === 4) {
+    }  else if (parseInt(numberValue.value) === 4) { //this requires the input to be parsed because of the strict equality operator 
         output.innerText = ones + fives;
     } else if (numberValue.value <= 8 && numberValue.value >= 5) {
         output.innerText = fives;
