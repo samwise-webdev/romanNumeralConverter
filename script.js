@@ -4,8 +4,8 @@ const convertBtn = document.getElementById("convert-btn");
 const ones = "I";
 const fives = "V";
 const tens = "X";
-// const twenties = tens + "X";
-// const thirties = tens + twenties;
+const twenties = tens + "X";
+const thirties = tens + twenties;
 
 
 // function inputArray() {
@@ -19,7 +19,7 @@ function onClickFunctions() {
     isInputEmpty();
     oneDigit();
     twoDigits();
-    onesPlace();
+//    onesPlace();
 }
 
 function isInputEmpty() {
@@ -71,7 +71,13 @@ function twoDigits() {
         output.innerText = "XIV"
     } else if(parseInt(numberValue.value) === 19) {
         output.innerText = "XIX"
-    } 
+    } else if (parseInt(numberValue.value >= 20 && numberValue.value <= 23)) {
+        output.innerText = twenties;
+        console.log("twenties")
+    //     for (let i = 15; i < numberValue.value; i++) {
+    //         output.innerText += "I"; 
+    //      }
+    }
 }
 
 //  function onesPlace() {
@@ -80,7 +86,7 @@ function twoDigits() {
 //     console.log("step 1")
 //     if (lastIndex <= 3) {
 //         for (let i = 0; i < lastIndex; i++ ) {
-//             output.innerText += "I";
+//            output.innerText += "I";
 //         }
 //     }
 // }
@@ -112,4 +118,4 @@ const romanNumerals = {
     900: "CM",
     1000: "M",
     1001: "MI"
-} */
+} */ 
