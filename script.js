@@ -19,6 +19,7 @@ function onClickFunctions() {
     isInputEmpty();
     oneDigit();
     twoDigits();
+    onesPlace();
 }
 
 function isInputEmpty() {
@@ -30,6 +31,7 @@ function isInputEmpty() {
         alert("Please enter a number less than or equal to 3999");
     }
 }
+
 
 function oneDigit() {
     if(numberValue.value <= 3) {
@@ -72,11 +74,42 @@ function twoDigits() {
     } 
 }
 
-//function to add the I's to any prefix ???
 //  function onesPlace() {
-//     numberValue.value = [];
-//         for (let i = number.value - 1; ) {
-            
+//     const inputArray = numberValue.value.split('');
+//     const lastIndex = parseInt(inputArray[inputArray.length - 1], 10);
+//     console.log("step 1")
+//     if (lastIndex <= 3) {
+//         for (let i = 0; i < lastIndex; i++ ) {
+//             output.innerText += "I";
 //         }
 //     }
-//  }
+// }
+
+
+
+/* I was going to see if using an object would make things easier but I can't figure out how so we're scrapping that for now.
+const romanNumerals = {
+    1: "I",
+    4: "IV",
+    5: "V",
+    10: "X",
+    20: "XX",
+    30: "XXX",
+    40: "XL",
+    50: "L",
+    60: "LX",
+    70: "LXX",
+    80: "LXXX",
+    90: "XC",
+    100: "C",
+    200: "CC",
+    300: "CCC",
+    400: "CD",
+    500: "D",
+    600: "DC",
+    700: "DCC",
+    800: "DCCC",
+    900: "CM",
+    1000: "M",
+    1001: "MI"
+} */
