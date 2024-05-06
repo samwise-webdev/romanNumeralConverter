@@ -21,6 +21,7 @@ function onClickFunctions() {
     oneDigit();
     twoDigits();
 //    onesPlace();
+    numberValue.value = "";
 }
 
 function isInputEmpty() {
