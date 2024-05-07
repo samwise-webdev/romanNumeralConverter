@@ -173,7 +173,7 @@ function twoDigits() {
     } else if (parseInt(numberValue.value) === 75) {
         output.innerText = "LXXV"
     } else if (parseInt(numberValue.value) >= 76 && parseInt(numberValue.value) <= 78) {
-        output.innerText = seventies;
+        output.innerText = seventies + fives;
         for (let i = 75; i < numberValue.value; i++) {
             output.innerText += "I";
         }
